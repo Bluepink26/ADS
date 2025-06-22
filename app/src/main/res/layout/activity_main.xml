@@ -1,0 +1,49 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="16dp">
+
+        <TextView android:text="第一步：开启必须权限" android:textStyle="bold" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:gravity="center_vertical">
+            <TextView android:text="无障碍权限" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <Button android:id="@+id/btn_accessibility" android:text="未开启" android:layout_marginLeft="16dp" android:background="@android:color/holo_red_light" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:gravity="center_vertical">
+            <TextView android:text="悬浮窗权限" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <Button android:id="@+id/btn_overlay" android:text="未开启" android:layout_marginLeft="16dp" android:background="@android:color/holo_red_light" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <View android:layout_height="16dp" android:layout_width="match_parent"/>
+        <TextView android:text="第二步：设置自动翻页参数" android:textStyle="bold" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+        <!-- 方向设置 -->
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:gravity="center_vertical">
+            <TextView android:text="阅读方向" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <Spinner android:id="@+id/spinner_direction" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16dp"/>
+        </LinearLayout>
+        <!-- 停留时间 -->
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:gravity="center_vertical">
+            <TextView android:text="停留时间(秒)" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <EditText android:id="@+id/et_stay_time" android:inputType="number" android:layout_width="50dp" android:layout_height="wrap_content" android:text="5"/>
+        </LinearLayout>
+        <!-- 总次数 -->
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:gravity="center_vertical">
+            <TextView android:text="总翻页次数" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <EditText android:id="@+id/et_max_page" android:inputType="number" android:layout_width="50dp" android:layout_height="wrap_content" android:text="20"/>
+        </LinearLayout>
+        <!-- 滑动时间 -->
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:gravity="center_vertical">
+            <TextView android:text="滑动时间(毫秒)" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <EditText android:id="@+id/et_slide_time" android:inputType="number" android:layout_width="60dp" android:layout_height="wrap_content" android:text="300"/>
+        </LinearLayout>
+        <!-- 随机滑动 -->
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:gravity="center_vertical">
+            <TextView android:text="是否随机滑动" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <Switch android:id="@+id/switch_random" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <View android:layout_height="16dp" android:layout_width="match_parent"/>
+        <TextView android:text="第三步：打开自动翻页面板" android:textStyle="bold" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <Button android:id="@+id/btn_show_panel" android:text="打开面板" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="center_horizontal" android:drawableLeft="@android:drawable/ic_media_play"/>
+    </LinearLayout>
+</ScrollView>
